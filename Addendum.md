@@ -1,0 +1,2 @@
+- Chaincode Deployment Instruction
+- ./network.sh deployCC -ccn certificateContract -ccp ../chaincode/bcert/javascript/ -ccl javascript -ccep "OR('Org1MSP.peer','Org2MSP.peer','Org3MSP.peer')"

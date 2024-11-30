@@ -1,6 +1,6 @@
 # Quick intro
 
-**BCertificate** is a Hyperledger blockchain full application that automates the issuance, dispatch, and management of university's digital credentials (diplomas, skills, transcripts, degree certifications, etc).
+**Trustificate** is a Hyperledger blockchain full application that automates the issuance, dispatch, and management of university's digital credentials (diplomas, skills, transcripts, degree certifications, etc).
 
 A blockchain network that let schools, colleges and universities add their credentials in the blockchain which could help against fraud papers.
 
@@ -9,7 +9,7 @@ The network was built using [Hyperledger Fabric V2.X.X](https://www.hyperledger.
 The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug template engine as a render for the front-end.
 
 ## Configuration and running
-**BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
+**Trustificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
 
 ### Hyperledger installation and configuration
 
@@ -24,7 +24,7 @@ The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug 
   - Find more details [Official HL documentation](https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html)
   - Run the test-network as described in [using the test-network tutoriel](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html) to make sure that everything is set up.
 
-### BCertificate, installation and running
+### Trustificate, installation and running
 Now how so we start our HL network and get our web app running?
 
 First and foremost, download or clone this repo.\
@@ -48,9 +48,6 @@ Repo structure:
 
     * **_javascript/_** is where we're going to *enroll ou admin*, *registrer our user* (so he/she can run transactions against the network by invoking the chaincode) and *querying the ledger* to get added certificates as we've deployed our chaincode while initializing it.\
     Run `npm install` before using any scripts. 
-
-    * **_java/_** same as *javascript/*, contains our administration scripts.
-    Not fully implemented and neither fully tested.\
 
     * **_apiserver/_** is our nodeJS application. It contains same administration scripts in *javascript/* and more.\
     Run `npm install` before using any enrolling admin, registering the user and invoking transactions.\
@@ -87,19 +84,9 @@ Git GitHub's certificate\
 
 ![alt text](screenshots/git-github.png "Certificate details")
 
-#### Contributions, remarks & questions
-Please contact me by email in case you've got questions, remarks, ... regarding the project.\
-Feel free to contribute by creating an [issue](https://github.com/alfahami/bcertificate/issues/new) and/or a [pull request](https://github.com/alfahami/bcertificate/pulls). \
+
 The main focus was on getting familiar with Hyperledger and its different ways of building blockchain solutions. 
 
-
-### Author
- [AL-FAHAMI TOIHIR](https://alfahami.github.io/ "Resume and protfolio page")\
- [FACULTY OF SCIENCE - KENITRA](http://fs.uit.ac.ma/ "Site officiel")\
- MATHEMATICS & COMPUTER SCIENCE DEPARTMENT
- 
- ### Licence: 
- This project is avalaible as open source under the terms of [licence MIT](https://opensource.org/licenses/MIT).
 
 
 

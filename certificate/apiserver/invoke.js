@@ -41,7 +41,7 @@ async function main() {
         // createCertificate transaction - requires 9 argument, ex: ('createCertificate', 'CERT12', 'ABDEL', '1857469', 'NBE388507', '05/08/1999', 'NADOR', 'MASTER RH', 'A. Bien', '07/07/2021')
 
         // changeStudentName transaction - requires 2 args , ex: ('changeCarOwner', 'CERT12', 'Dave')
-         await contract.submitTransaction('createCertificate', 'CERT30', 'NELSON MANDELA', '1857469', 'NBE388507', '05/08/1999', 'SOUTH AFRICA', 'MASTER RH', 'A. Bien', '07/07/2021');
+        await contract.submitTransaction('createCertificate', 'CERT30', 'NELSON MANDELA', '1857469', 'NBE388507', '05/08/1999', 'SOUTH AFRICA', 'MASTER RH', 'A. Bien', '07/07/2021');
         console.log('Transaction has been submitted');
 
         // const response = await contract.submitTransaction('queryCertificate', 'CERT1');
@@ -51,7 +51,7 @@ async function main() {
         // const response = await contract.submitTransaction('changeStudentName', 'CERT2', 'MACRON');
         // console.log('Transaction has been submitted');
         //console.log(`Transaction has been evaluated, result is: ${response.toString()}`);
-        
+
 
         // Disconnect from the gateway.
         await gateway.disconnect();

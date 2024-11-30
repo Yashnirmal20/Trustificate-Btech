@@ -30,7 +30,7 @@ CC_SRC_LANGUAGE=`echo "$CC_SRC_LANGUAGE" | tr [:upper:] [:lower:]`
 if [ "$CC_SRC_LANGUAGE" = "go" -o "$CC_SRC_LANGUAGE" = "golang" ] ; then
 	CC_SRC_PATH="../chaincode/certificate/go/"
 elif [ "$CC_SRC_LANGUAGE" = "javascript" ]; then
-	CC_SRC_PATH="../chaincode/certificate/javascript/"
+	CC_SRC_PATH="../chaincode/certificate-code/javascript/"
 elif [ "$CC_SRC_LANGUAGE" = "java" ]; then
 	CC_SRC_PATH="../chaincode/certificate/java"
 elif [ "$CC_SRC_LANGUAGE" = "typescript" ]; then
@@ -85,59 +85,5 @@ JavaScript:
   return all certificates, but you can update the application to evaluate other transactions:
     node query
 
-TypeScript:
-
-  Start by changing into the "typescript" directory:
-    cd typescript
-
-  Next, install all required packages:
-    npm install
-
-  Next, compile the TypeScript code into JavaScript:
-    npm run build
-
-  Then run the following applications to enroll the admin user, and register a new user
-  called appUser which will be used by the other applications to interact with the deployed
-  Certificate contract:
-    node dist/enrollAdmin
-    node dist/registerUser
-
-  You can run the invoke application as follows. By default, the invoke application will
-  create a new certificate, but you can update the application to submit other transactions:
-    node dist/invoke
-
-  You can run the query application as follows. By default, the query application will
-  return all certificates, but you can update the application to evaluate other transactions:
-    node dist/query
-
-Java:
-
-  Start by changing into the "java" directory:
-    cd java
-
-  Then, install dependencies and run the test using:
-    mvn test
-
-  The test will invoke the sample client app which perform the following:
-    - Enroll admin and appUser and import them into the wallet (if they don't already exist there)
-    - Submit a transaction to create a new certificate
-    - Evaluate a transaction (query) to return details of this certificate
-    - Submit a transaction to change the owner of this certificate
-    - Evaluate a transaction (query) to return the updated details of this certificate
-
-Go:
-
-  Start by changing into the "go" directory:
-    cd go
-
-  Then, install dependencies and run the test using:
-    go run certificate.go
-
-  The test will invoke the sample client app which perform the following:
-    - Import user credentials into the wallet (if they don't already exist there)
-    - Submit a transaction to create a new certificate
-    - Evaluate a transaction (query) to return details of this certificate
-    - Submit a transaction to change the owner of this certificate
-    - Evaluate a transaction (query) to return the updated details of this certificate
 
 EOF
